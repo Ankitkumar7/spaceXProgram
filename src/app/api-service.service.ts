@@ -13,9 +13,12 @@ export class ApiServiceService {
   }
 
   getLaunches(limit, queryParams?) {
-    if(queryParams && queryParams.launch_year) {
-      queryParams['launch_year'] = queryParams.launch_year
-    }
+    // if(queryParams && queryParams.launch_year) {
+    //   queryParams['launch_year'] = queryParams.launch_year
+    // }
+    // if(queryParams && queryParams.land_success) {
+    //   queryParams['land_succes'] = queryParams.land_succes
+    // }
     if(queryParams) {
       const URL = this.baseUrl + `?limit=${limit}`;
       return this.http.get(URL, {params: queryParams});

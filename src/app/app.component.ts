@@ -80,5 +80,12 @@ export class AppComponent {
     }
   }
 
+  successLand(event) {
+    this.queryParams.land_success = event;
+    this.getLaunches(this.queryParams)
+    console.log(this.queryParams);
+    
+  }
+
  
 }

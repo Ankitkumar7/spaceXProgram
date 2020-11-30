@@ -29,8 +29,8 @@
 
 <h5 style="text-align:center;text-decoration: underline;">Successfully Landing</h5>
 <p style="text-align: center;">
-<button class="button">True</button>
-<button class="button">False</button>
+<button (click)=successLandFilter(true) [class.active]="activeLandFilter === true"    class="button">True</button>
+<button (click)=successLandFilter(false) [class.active]="activeLandFilter === false"   class="button">False</button>
 </p>
 
 </div>

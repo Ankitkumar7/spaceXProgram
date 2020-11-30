@@ -1,5 +1,5 @@
 <h1 class="title">SpaceX Launch Programs</h1>
-<app-filter (successLaunche)="successLaunche($event)"  (linkedClicked)="linkToggler($event)"></app-filter>
+<app-filter (successLand)="successLand($event)" (successLaunche)="successLaunche($event)"  (linkedClicked)="linkToggler($event)"></app-filter>
 <div class="wrapper-grid">
   <div *ngFor="let mission of missionList, let i = index;"  class="container">
    <div class="img-background">

@@ -1,0 +1,24 @@
+<h1 class="title">SpaceX Launch Programs</h1>
+<app-filter (successLaunche)="successLaunche($event)"  (linkedClicked)="linkToggler($event)"></app-filter>
+<div class="wrapper-grid">
+  <div *ngFor="let mission of missionList, let i = index;"  class="container">
+   <div class="img-background">
+       <img [src]="renderImage(mission)" alt='profile image' class="profile-img">
+    </div>
+    <h1 class="name">{{mission.mission_name?mission.mission_name: 'N/A'}} #{{i+1}}</h1>
+    <div  class="metainfo">
+        <ng-container *ngIf="isMissionIdAvail(mission)" >
+            <p  class="metinfo-title">Mission Ids</p>
+            <ul *ngFor="let id of mission.mission_id">
+            <li>{{id}}</li>
+            </ul>
+        </ng-container>
+       
+
+        <p class="metinfo-title">Launch Year: <span style="color:blue;font-weight: normal;">{{mission.launch_year?mission.launch_year: 'N/A'}} </span></p>
+        <p class="metinfo-title">Successfully Launch: <span style="color:blue;font-weight: normal;">{{mission.launch_success?mission.launch_success: 'N/A'}} </span></p>
+        <p class="metinfo-title">Successfully Landing: <span style="color:blue;font-weight: normal;">{{landingStatus(mission)}} </span></p>
+
+    </div>
+</div>
+

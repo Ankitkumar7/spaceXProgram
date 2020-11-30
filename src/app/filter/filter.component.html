@@ -1,0 +1,36 @@
+<div class="sidenav" style="background-color:white;font-size: 25px;">
+    <h4 style="font-weight: bold;margin-left: 20px;">Filters</h4>
+    <h5 style="text-align:center;text-decoration: underline;">Launch Year</h5>
+<p style="text-align: center;">
+    <ng-container *ngFor="let year of filterValue">
+        <button (click)="setStateAsActive(year)" [class.active]="activeYear === year" class="button">{{year}}</button>
+    </ng-container>
+    <!-- <button (click)="setStateAsActive('2007')" [class.active]="activeState === '2007'" class="button">2007</button>
+    <button (click)="setStateAsActive('2008')" [class.active]="activeState === '2008'"  class="button">2008</button>
+    <button (click)="setStateAsActive('2009')" [class.active]="activeState === '2009'"  class="button">2009</button>  
+    <button (click)="setStateAsActive('2010')" [class.active]="activeState === '2010'"  class="button">2010</button>
+    <button (click)="setStateAsActive('2011')" [class.active]="activeState === '2011'"  class="button">2011</button> 
+     <button (click)="setStateAsActive('2012')" [class.active]="activeState === '2012'"  class="button">2012</button>
+    <button (click)="setStateAsActive('2013')" [class.active]="activeState === '2013'"  class="button">2013</button>
+    <button (click)="setStateAsActive('2014')" [class.active]="activeState === '2014'"  class="button">20114</button>
+    <button (click)="setStateAsActive('2015')" [class.active]="activeState === '2015'"  class="button">2015</button>
+    <button (click)="setStateAsActive('2016')" [class.active]="activeState === '2016'"  class="button">2016</button>
+    <button (click)="setStateAsActive('2017')" [class.active]="activeState === '2017'"  class="button">2018</button>
+    <button class="button">2019</button>
+    <button class="button">2020</button> -->
+
+</p>
+
+<h5 style="text-align:center;text-decoration: underline;">Successfully Launch</h5>
+<p style="text-align: center;">
+<button (click)=successLaunchFilter(true) [class.active]="activeLaunchFilter === true"  class="button">True</button>
+<button (click)=successLaunchFilter(false) [class.active]="activeLaunchFilter === false"  class="button">False</button>
+</p>
+
+<h5 style="text-align:center;text-decoration: underline;">Successfully Landing</h5>
+<p style="text-align: center;">
+<button class="button">True</button>
+<button class="button">False</button>
+</p>
+
+</div>
